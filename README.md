@@ -1,8 +1,7 @@
 # cybersec-journey
 
 **Inicio:** marzo 2025
-**Plan:** Ruta de 12 meses gratuita
-**Formacion paralela:** Tecnicatura en Seguridad Informatica - Teclab
+**Plan:** Ruta de 12 meses
 ---
 ## Estructura del repositorio
 mes-1-2/ <- comandos de red y observaciones
