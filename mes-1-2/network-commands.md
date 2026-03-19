@@ -2,6 +2,7 @@
 ---
 ## ipconfig
 **Que hace:** Muestra la configuracion de red de tu PC.
+
 **Como usarlo:**
 ```
 ipconfig
@@ -9,7 +10,7 @@ ipconfig
 **Lo que aprendi:**
 - IPv4: tu direccion dentro de la red local
 - Gateway: la IP de tu router, primer salto a Internet
-- DNS: traduce nombres (google.com) a IPs numericas
+- DNS: traduce nombres (google.com) a IPs numerica
 **Lo que observe en mi red:** 
 ---
 ## ping
