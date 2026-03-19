@@ -15,9 +15,11 @@ ipconfig
 ---
 ## ping
 **Que hace:** Prueba conectividad y mide tiempo de respuesta.
+
 **Diferencia clave:**
 - ping 8.8.8.8 -> prueba solo conectividad IP
 - ping google.com -> prueba IP + DNS
+- 
 **Lo que observe:** 
 ---
 ## tracert
