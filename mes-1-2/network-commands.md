@@ -1,8 +1,8 @@
 # Comandos de red - Mes 1-2
+Explicaciones con mis propias palabras.
 ---
 ## ipconfig
 **Que hace:** Muestra la configuracion de red de tu PC.
-
 **Como usarlo:**
 ```
 ipconfig
@@ -10,22 +10,20 @@ ipconfig
 **Lo que aprendi:**
 - IPv4: tu direccion dentro de la red local
 - Gateway: la IP de tu router, primer salto a Internet
-- DNS: traduce nombres (google.com) a IPs numerica
-**Lo que observe en mi red:** ()
+- DNS: traduce nombres (google.com) a IPs numericas
+**Lo que observe en mi red:** (escribi aca)
 ---
 ## ping
 **Que hace:** Prueba conectividad y mide tiempo de respuesta.
-
 **Diferencia clave:**
 - ping 8.8.8.8 -> prueba solo conectividad IP
 - ping google.com -> prueba IP + DNS
-- 
-**Lo que observe:** ()
+**Lo que observe:** (escribi aca)
 ---
 ## tracert
 **Que hace:** Muestra el camino salto a salto hasta el destino.
-**Lo que observe:** ()
+**Lo que observe:** (escribi aca)
 ---
 ## nslookup
 **Que hace:** Consulta DNS para resolver un dominio a IP.
-**Lo que observe:** 
+**Lo que observe:** (escribi aca)
