@@ -2,8 +2,7 @@
 Explicaciones con mis propias palabras.
 ---
 ## ipconfig
-**Que hace:** Muestra la configuracion de red de tu PC.
-**Como usarlo:**
+**Que hace:** Muestra la configuracion de red de tu PC.**Como usarlo:**
 ```
 ipconfig
 ```
