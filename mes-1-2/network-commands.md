@@ -44,25 +44,45 @@ ipconfig
   
 ---
 ## ping
-**Qué hace:** 
-Prueba conectividad y mide tiempo de respuesta.
-Mide el tiempo de traslado de paquetes entre dos
-dispositivos y si la conexion es real o hay algun problema.
 
-**Diferencia clave:**
-- ping 8.8.8.8    -> prueba conectividad IP pura, va directo sin DNS
-- ping google.com -> prueba IP + DNS, primero resuelve el nombre
-  
-**Lo que observé:**
-- 8.8.8.8 es el servidor DNS publico de Google.
-  1.1.1.1 es el de Cloudflare.
+**Que hace:** Envia paquetes a una direccion y mide si llegan
+y en cuanto tiempo. Verifica conectividad y estabilidad
+de la conexion.
 
-- ping google.com usa DNS para resolver el nombre a una IP
-  antes de enviar los paquetes.
-  ping 8.8.8.8 va directo, sin pasar por DNS.
+**Como usarlo:**
+- ping google.com      → prueba conexion + DNS
+- ping 8.8.8.8         → prueba conexion IP directa, sin DNS
+- ping 192.168.x.1     → prueba conexion con el gateway
 
-- Si ping 8.8.8.8 funciona pero ping google.com falla,
-  el problema es el DNS, no Internet.
+**Lo que entendi:**
+
+- Mide el tiempo de traslado de paquetes entre dos dispositivos.
+  No son archivos, son paquetes.
+
+- La diferencia entre los dos usos:
+  ping por nombre (google.com) primero resuelve el DNS,
+  ping por IP (8.8.8.8) va directo sin ese paso.
+
+- Si los 4 paquetes enviados vuelven sin perdida,
+  la conexion esta estable.
+
+- TTL (Time To Live): contador que decrementa en 1 en cada
+  router que atraviesa el paquete. Cuando llega a 0 el paquete
+  se descarta. Evita que los paquetes circulen en bucles
+  infinitamente.
+
+**Tabla de diagnostico:**
+
+| Situacion           | ping 8.8.8.8 | ping google.com | Problema    |
+|---------------------|--------------|-----------------|-------------|
+| Todo bien           | OK           | OK              | Ninguno     |
+| DNS caido           | OK           | Falla           | DNS         |
+| Sin internet        | Falla        | Falla           | Red/router  |
+
+**Comandos relacionados si hay problema de DNS:**
+- ipconfig /flushdns   → limpia la cache DNS
+- ipconfig /release    → libera IP
+- ipconfig /renew      → pide IP nueva al router
   
 ---
 ## tracer
