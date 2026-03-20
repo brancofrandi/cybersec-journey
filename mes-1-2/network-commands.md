@@ -3,19 +3,19 @@ Explicaciones con mis propias palabras.
 ---
 ## ipconfig
 
-**Que hace:** Muestra la configuracion de red de mi PC.
+**Qué hace:** Muestra la configuracion de red de mi PC.
 Para ver mas detalle, incluyendo el DNS, usar ipconfig /all.
 
-**Como usarlo:**
+**Cómo usarlo:**
 ```
 ipconfig
 ```
-**Lo que aprendi:**
-- IPv4: tu direccion dentro de la red local
+**Lo que aprendí:**
+- IPv4: tu dirección dentro de la red local
 - Gateway: la IP de tu router, primer salto a Internet
 - DNS: traduce nombres (google.com) a IPs numericas
   
-**Lo que entendi con mis palabras:**
+**Lo que entendí con mis palabras:**
 
 - Mi IP empieza con 192.168 porque los primeros dos octetos
   identifican que es una IP privada. Este rango esta reservado
@@ -36,7 +36,7 @@ ipconfig
   (Nota: no son 256 dispositivos disponibles sino 253, porque
   el .0, el .1 del gateway y el .255 de broadcast no se pueden usar)
   
-**Lo que observe en mi red:** 
+**Lo que observé en mi red:** 
 
   Tengo 4 interfaces de red. La que uso para Internet es el WiFi.
   La interfaz con IP 192.168.56.x no es de Internet, es de
@@ -44,7 +44,7 @@ ipconfig
   
 ---
 ## ping
-**Que hace:** 
+**Qué hace:** 
 Prueba conectividad y mide tiempo de respuesta.
 Mide el tiempo de traslado de paquetes entre dos
 dispositivos y si la conexion es real o hay algun problema.
@@ -53,7 +53,7 @@ dispositivos y si la conexion es real o hay algun problema.
 - ping 8.8.8.8    -> prueba conectividad IP pura, va directo sin DNS
 - ping google.com -> prueba IP + DNS, primero resuelve el nombre
   
-**Lo que observe:**
+**Lo que observé:**
 - 8.8.8.8 es el servidor DNS publico de Google.
   1.1.1.1 es el de Cloudflare.
 
@@ -65,7 +65,7 @@ dispositivos y si la conexion es real o hay algun problema.
   el problema es el DNS, no Internet.
   
 ---
-## tracert
+## tracer
 **Que hace:** Muestra el camino salto a salto hasta el destino.
 **Lo que observe:** (escribi aca)
 ---
