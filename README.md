@@ -1,7 +1,9 @@
 # cybersec-journey
 
 **Inicio:** marzo 2026
+
 **Plan:** Ruta de 12 meses
+
 ---
 ## Estructura del repositorio
 - mes-1-2/ <- comandos de red y observaciones
