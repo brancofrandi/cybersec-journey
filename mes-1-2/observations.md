@@ -31,11 +31,40 @@
 - Como funciona exactamente la mascara en binario
 - Por que mi DNS no pasa por el router
 ---
-## Sesion 2 - [fecha]
+## Sesion 2 - 20/03/2026
 **Comandos que use:**
--
-**Algo que no esperaba:**
-**Algo que no entendi:**
-**Pregunta nueva:**
+- ping google.com
+- ping 8.8.8.8
+- ping 192.168.x.1 (gateway)
+
+**Lo que predije antes de ejecutar:**
+- ping google.com: mostraria traslado de paquetes y verificaria
+  conexion con google
+- ping 8.8.8.8: lo mismo pero sin pasar por DNS, esperaba
+  que fuera mas rapido
+- ping gateway: no sabia bien para que servia, esperaba
+  que tardara menos que los otros dos
+
+**Lo que obtuve:**
+- 4 paquetes enviados, 4 recibidos, sin perdidas en los tres casos
+- Tiempos similares entre google.com y 8.8.8.8 (diferencia de 1-2ms)
+
+**Lo que entendi solo:**
+- La diferencia entre ping por nombre y ping por IP ya la tenia
+  clara desde la sesion anterior, se confirmo
+- TTL decrementa en 1 en cada router para evitar que los paquetes
+  circulen infinitamente en bucles
+
+**Lo que no sabia y tuve que investigar:**
+- Por que difieren los ms entre 8.8.8.8 y google.com
+  (tiene que ver con Anycast y que 8.8.8.8 conecta al nodo
+  mas cercano fisicamente)
+- Los valores TTL iniciales segun sistema operativo:
+  Windows = 128, Linux/Mac = 64
+
+**Lo que me queda pendiente para estudiar:**
+- Como se diagnostica un problema de DNS paso a paso
+- Que es exactamente el protocolo ICMP que usa ping
+  
 ---
 ## Conceptos que fui entendiendo durante el mes
