@@ -10,7 +10,7 @@
 - mes-3-4/ <- linux (se completa cuando llegues)
 - mes-5-6/ <- herramientas + python
 - tryhackme/ <- laboratorios THC
-- technicality
+- technicality/ <- tecnicatura en seguridad informática
 ---
 ## Progreso
 | Etapa | Estado |
