@@ -1,4 +1,4 @@
-# Tecnicatura en Seguridad Informatica
+# Tecnicatura en Seguridad Informática
 
 ## Clases de Nivelacion en Redes
 
