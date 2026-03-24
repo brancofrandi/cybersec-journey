@@ -108,6 +108,3 @@ ISO y se ejecuto el sistema.
 - Concepto de ruteo y tablas de ruteo
 - RTOS y su relevancia en seguridad industrial
 
-### Dudas pendientes
-
--
