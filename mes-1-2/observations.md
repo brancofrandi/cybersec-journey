@@ -20,13 +20,13 @@
 **Algo que no sabia y aprendi hoy:**
 - Que es el DNS y para que sirve en terminos practicos.
   En vez de recordar 104.26.10.229 escribimos tryhackme.com.
-- Por que mi IP empieza con 192.168 (rango privado reservado).
+- Por qué mi IP empieza con 192.168 (rango privado reservado).
 - La diferencia entre ping por nombre y ping por IP.
 - Que la mascara 255.255.255.0 no permite 256 dispositivos
   sino 253, porque tres IPs estan reservadas.
 
 **Pregunta que me queda:**
-- Quien administra los rangos de IPs a nivel mundial
+- Quién administra los rangos de IPs a nivel mundial
   y como se asignan en Argentina.
 - Como funciona exactamente la mascara en binario
 - Por que mi DNS no pasa por el router
