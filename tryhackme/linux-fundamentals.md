@@ -15,7 +15,7 @@ desde terminal, por eso Linux es el sistema dominante en el area.
 
 ### Comandos aprendidos
 
-| Comando | Que hace |
+| Comando | Qué hace |
 |---------|----------|
 | echo    | Devuelve el texto que escribiste |
 | whoami  | Muestra el nombre del usuario activo |
@@ -48,7 +48,7 @@ desde terminal, por eso Linux es el sistema dominante en el area.
 
 ### Comandos practicados
 
-| Comando | Que hace |
+| Comando | Qué hace |
 |---------|----------|
 | `ls` | Muestra los archivos y carpetas del directorio actual |
 | `cd` | Entra a la carpeta indicada |
@@ -61,7 +61,7 @@ desde terminal, por eso Linux es el sistema dominante en el area.
 
 ---
 
-### Lo que practique
+### Lo que practiqué
 
 - Navegue el sistema de archivos desde la raiz /
 - Explore carpetas del sistema en /etc
@@ -72,7 +72,7 @@ desde terminal, por eso Linux es el sistema dominante en el area.
 
 ---
 
-### Ejercicios que resolvi solo
+### Ejercicios que resolví solo
 
 `cat /etc/os-release`
 `find / -name hostname`
@@ -84,7 +84,7 @@ desde terminal, por eso Linux es el sistema dominante en el area.
 
 ---
 
-### Lo que aprendi sobre /etc/passwd
+### Lo que aprendí sobre /etc/passwd
 
 - Lista todos los usuarios del sistema
 - Tiene 7 campos separados por dos puntos:
