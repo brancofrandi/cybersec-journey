@@ -164,6 +164,78 @@ tracert -d <destino
 El -d acelera el comando sin convertir IPs en nombres de host
 
 ---
-## nslookup
-**Que hace:** Consulta DNS para resolver un dominio a IP.
-**Lo que observe:** (escribi aca)
+## Analisis de nslookup
+**Fecha:** [29/03/2026]
+
+---
+
+### Que hace
+
+Permite resolver nombres de dominio a IPs y viceversa.
+Comprueba si funcionan los servidores DNS y diagnostica
+problemas de resolucion de nombres.
+
+Sintaxis: nslookup <dominio>
+
+### Lo que muestra el resultado
+
+- Servidor DNS que respondio la consulta
+- Si dice "respuesta no autoritativa": el DNS respondio
+  desde su cache, no desde el servidor original
+- Nombre del dominio
+- IPs asociadas (IPv4 e IPv6)
+
+### Tipos de registros DNS
+
+| Registro | Para que sirve |
+|----------|----------------|
+| A        | Direccion IPv4 |
+| AAAA     | Direccion IPv6 |
+| MX       | Servidores de correo |
+| PTR      | Consulta inversa (IP a nombre) |
+
+---
+
+### Lo que observe en mis pruebas
+
+**google.com y tryhackme.com**
+Cada consulta devolvio una IP diferente entre nslookup y ping
+para el mismo dominio. Esto pasa porque Google usa DNS Round
+Robin y balanceo de carga: cada consulta recibe una IP distinta
+para distribuir el trafico entre miles de servidores.
+
+**Dominio inventado**
+En vez de devolver un error, Fibertel redirigio la consulta
+a una IP propia. Esto se llama DNS Hijacking: el proveedor
+intercepta dominios inexistentes para mostrar publicidad.
+La respuesta correcta deberia ser NXDOMAIN (dominio no existe).
+
+**Solucion al DNS Hijacking**
+- Cambie el DNS a 8.8.8.8 (Google) en Panel de Control
+- Ejecute ipconfig /flushdns para limpiar la cache
+- Resultado: ahora los dominios inexistentes devuelven
+  correctamente "Non-existent domain"
+
+**El sufijo fibertel.com.ar**
+Sigue activo porque lo impone el router via DHCP.
+Para evitar que afecte las consultas: nslookup dominio.com.
+El punto final le dice a Windows que el nombre esta completo.
+
+---
+
+### Por que el DNS de un objetivo es util en ciberseguridad
+
+- Mapea la infraestructura: revela subdominios, IPs, servidores
+- Identifica servidores de correo (registros MX)
+- Permite detectar tunel DNS (exfiltracion de datos via DNS)
+- Ayuda a bloquear dominios de phishing
+- Revela configuraciones incorrectas o expuestas
+
+---
+
+### Comandos aprendidos
+
+- nslookup google.com        → consulta basica
+- nslookup google.com 8.8.8.8 → usar DNS especifico
+- nslookup dominio.com.      → evitar sufijo del proveedor
+- ipconfig /flushdns          → limpiar cache DNS
