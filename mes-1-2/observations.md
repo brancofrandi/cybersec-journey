@@ -67,4 +67,40 @@
 - Que es exactamente el protocolo ICMP que usa ping
   
 ---
-## Conceptos que fui entendiendo durante el mes
+## Cierre de etapa — Mes 1-2
+**Fecha:** [31/03-26]
+
+---
+
+### Lo que sabia al empezar
+
+- Nociones basicas de redes del curso de Cisco
+- VirtualBox instalado y Ubuntu configurado
+- Algunos conceptos de ciberseguridad industrial sin profundidad
+
+### Lo que se ahora
+
+- Flujo DNS completo de memoria, paso a paso
+- Comandos ipconfig, ping, tracert, nslookup, netstat, ss
+- Diferencia entre puertos abiertos, cerrados y filtrados
+- Puertos clave y que servicio corre en cada uno
+- Modelo OSI completo con sus 7 capas
+- Three-way handshake de TCP
+- Encapsulacion y de-encapsulacion
+- Como analizar mi propia red e interpretar cada resultado
+- Como identificar servicios corriendo en mi sistema
+
+### Lo mas importante de esta etapa
+
+Pasar de ejecutar comandos a entender que significa
+cada linea del resultado. La diferencia entre saber
+que existe un comando y poder interpretar lo que devuelve.
+
+Tambien descubrir que tenia Mosquitto corriendo en segundo
+plano sin saberlo. Eso es exactamente lo que hace un
+analista al revisar un sistema.
+
+### Proximo foco
+
+Mes 3-4: Linux como foco central.
+OverTheWire Bandit cuando los comandos basicos esten solidos.
