@@ -15,7 +15,7 @@
 ## Progreso
 | Etapa | Estado |
 |-----------------|------------|
-| Mes 1-2: Redes | En curso |
-| Mes 3-4: Linux | Pendiente |
+| Mes 1-2: Redes | COMPLETO |
+| Mes 3-4: Linux | En curso |
 | Mes 5-6: Tools | Pendiente |
 | Mes 7-8: CTFs | Pendiente |
