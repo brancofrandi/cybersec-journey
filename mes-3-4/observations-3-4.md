@@ -29,7 +29,7 @@ Con sudo muestra numero de proceso y nombre del servicio.
 
 **Mosquitto**
 Broker MQTT, protocolo para IoT e industrial.
-Estaba instalado del curso de Ingelear, corriendo en
+Estaba instalado del curso de Ingelearn, corriendo en
 segundo plano sin saberlo. Puerto 1883.
 Instalado como snap, nombre del servicio:
 snap.mosquitto.mosquitto.service
