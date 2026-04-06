@@ -1,0 +1,68 @@
+## Ejercicio — Relevamiento inicial de servidor Linux
+**Fecha:** 05/04/2026
+
+---
+
+### Consigna
+
+Relevamiento inicial de un servidor Linux sin guia.
+Identificar que servicios estan corriendo y reportar hallazgos.
+
+---
+
+### Proceso que realice
+
+Ejecute sudo netstat -tulpn para obtener inventario de
+servicios activos y puertos en escucha.
+
+---
+
+### Lo que identifique solo
+
+- Ningun servicio expuesto en 0.0.0.0 en Local Address
+- Todo el trafico restringido a loopback (127.0.0.1) o
+  red virtualizada (10.0.2.x)
+- Tres servicios activos: systemd-resolved, systemd-networkd
+  y containerd
+- containerd es el unico servicio no nativo de Linux,
+  instalado con la diplomatura Industria 4.0
+
+### Lo que investigue con Google
+
+- Que hace exactamente systemd-resolved y systemd-networkd
+- Por que aparece 10.0.2.15 y que significa en VirtualBox
+
+---
+
+### Conclusion
+
+El servidor no presenta riesgos en su estado actual.
+containerd escucha en 127.0.0.1, no esta expuesto.
+Recomendacion: confirmar si esta en uso. Si no lo esta,
+deshabilitar con sudo systemctl disable containerd
+para reducir superficie de ataque.
+
+Revision mensual con sudo netstat -tulpn documentando
+cualquier servicio nuevo en 0.0.0.0.
+
+---
+
+### Diferencia entre mi reporte y el reporte profesional
+
+- Me falto nombrar cada servicio con lo que hace,
+  reporte solo la cantidad
+- Me falto separar lo que observe solo de lo que investigue
+- La recomendacion fue generica, sin comando ni frecuencia
+
+---
+
+### Concepto que confundia y quedo claro
+
+Local Address: donde escucha el servicio en mi maquina.
+  Ahi importa si dice 127.0.0.1 o 0.0.0.0.
+
+Foreign Address: estado de espera, todavia no hay nadie
+  conectado. 0.0.0.0:* significa cualquier origen posible
+  pero nadie conectado aun. No es una alerta.
+
+La regla: siempre mirar Local Address para evaluar riesgo.
