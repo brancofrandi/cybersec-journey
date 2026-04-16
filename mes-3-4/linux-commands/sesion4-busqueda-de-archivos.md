@@ -51,9 +51,10 @@ grep "root" /etc/passwd
 grep -i "error" /var/log/syslog
 grep -r "root" /etc/
 grep -n "error" sistema.log
-Parte A — find
 
 ---
+
+### Parte A — find
 
 find /etc -name "passwd" (Busca archivos llamados exactamente passwd) 
 
