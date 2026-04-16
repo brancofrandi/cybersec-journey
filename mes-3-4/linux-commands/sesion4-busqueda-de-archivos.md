@@ -64,7 +64,7 @@ Los .log registran eventos del sistema (errores, accesos, servicios).
 
 find /etc -name "*.conf" | wc -l (Cuenta archivos .conf)
 
-find / -name "hostname" 2>/dev/null
+# find / -name "hostname" 2>/dev/null 
 2 → stderr
 > → redirección
 /dev/null → descarta datos
