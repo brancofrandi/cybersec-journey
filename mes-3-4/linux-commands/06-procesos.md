@@ -1,58 +1,107 @@
-# Sesión 06 - Bloque 4: Procesos y Servicios
+## Sesión 06 — Procesos y Servicios
+**Fecha:** 03/05/2026
 
-Fecha: 03/05/2026 
+---
 
-## PARTE A: ps aux (104 procesos)
-$ ps aux | wc -l # 104 procesos total
-$ ps aux | awk '{print $1}' | sort | uniq -c | sort -nr
-90 root
-6 branco
+### Bloque 4 — Procesos: conceptos consolidados
 
-text
-**Columnas**: USER|PID|%CPU|%MEM|VSZ|RSS|TTY|STAT|START|TIME|COMMAND  
-**TTY**: `?`=daemon | `pts/0`=gráfico | `tty1`=consola  
-**Sort**: `ps aux --sort=-%mem | head -5`
+**ps aux — estructura de salida**
 
-## PARTE B: systemctl (213 servicios)
-$ systemctl list-units --type=service --state=running | wc -l
-213
+| Columna | Significado |
+|---------|-------------|
+| USER | Usuario que ejecuta el proceso |
+| PID | Identificador único del proceso |
+| %CPU | Porcentaje CPU consumida |
+| %MEM | Porcentaje memoria consumida |
+| VSZ | Memoria virtual (kB) |
+| RSS | Memoria residente (kB) |
+| TTY | Terminal asociada |
+| STAT | Estado del proceso |
+| START | Fecha/hora inicio |
+| TIME | Tiempo CPU acumulado |
+| COMMAND | Comando ejecutado |
 
-Stop/Start cron
-$ sudo systemctl stop cron
-$ systemctl status cron
-Active: inactive (dead) since Sun 2026-05-03 14:48:26 UTC
-Main PID: 731 (code=killed, signal=TERM)
+**TTY descifrados:**
+- `?` → daemon (sin terminal)
+- `pts/0` → pseudo-terminal gráfica 
+- `tty1` → consola virtual nativa
 
-$ sudo systemctl start cron
-$ systemctl status cron
-Active: active (running) since Sun 2026-05-03 14:51:24 UTC
-Main PID: 3097 (cron)
+**Ordenamiento:**
+- `--sort=-%mem` → mayor a menor memoria
+- `--sort=-%cpu` → mayor a menor CPU
 
-text
-**stop**=mata ahora | **disable**=no boot | **cron**=scheduler tareas
+**Mi sistema:** 104 procesos total, 90 root, 6 branco
 
-## PARTE C: netstat/ss - Puertos abiertos
-$ sudo netstat -tulpn | head -5
-Proto Local Address State PID/Program
-tcp 0.0.0.0:53 LISTEN 567/systemd-resolve
+---
+
+### Bloque 4 — Servicios: conceptos consolidados
+
+**systemctl — comandos base**
+list-units --type=service --state=running | wc -l → 213 servicios
+status SERVICIO → estado actual
+stop SERVICIO → detiene inmediatamente
+start SERVICIO → inicia inmediatamente
+disable SERVICIO → no arranca al boot
+
+
+**Cron demo:**
+Active: inactive (dead) → parado
+Main PID: 731 (killed, signal=TERM) → proceso terminado
+Active: active (running) → ejecutándose
+Main PID: 3097 (cron) → proceso vivo
+
+
+**Proceso vs Servicio:**
+- Proceso → temporal, control manual (ps aux)
+- Servicio → daemon persistente, systemd (systemctl)
+
+---
+
+### Bloque 4 — Puertos abiertos: netstat/ss
+
+**Puertos detectados en mi sistema:**
+netstat -tulpn | head -5
+tcp 0.0.0.0:53 LISTEN 567/systemd-resolve (DNS)
 tcp 0.0.0.0:45537 LISTEN 797/containerd
-udp 0.0.0.0:68 - systemd/networkd
+udp 0.0.0.0:68 systemd-networkd (DHCP)
 
-text
-**Puertos**: 53(DNS), 68(DHCP), 45537(containerd efímero)  
-**0.0.0.0**=todas interfaces (normal en VM local)
 
-**Flags `-tulpn`**:
-- `t`=TCP | `u`=UDP | `l`=LISTEN | `p`=PID/programa | `n`=numérico
+**`-tulpn` descifrado:**
+| Flag | Significado |
+|------|-------------|
+| t | TCP solamente |
+| u | UDP solamente |
+| l | LISTEN (escuchando) |
+| p | PID/programa (requiere sudo) |
+| n | Numérico (sin DNS lookup) |
 
-**ss vs netstat**: ss=moderno/rápido(kernel) | netstat=viejo(/proc/net)
+**0.0.0.0** → todas las interfaces (normal en VM local)
 
-## COMANDOS NUEVOS 
+**netstat vs ss:**
+- netstat → obsoleto, lee /proc/net
+- ss → moderno, acceso directo kernel (más rápido)
+
+---
+
+### Comandos nuevos dominados
+
+ps aux --sort=-%mem | head -5
+
 systemctl list-units --type=service --state=running | wc -l
-sudo systemctl [stop|start|status|disable] SERVICIO
+
+sudo systemctl stop cron && systemctl status cron
+
 sudo netstat -tulpn | head -10
+
 sudo ss -tulpn | head -10
 
-text
 
-**Criterios cumplidos**: [x] Identifico procesos/servicios con ps/systemctl/netstat
+---
+
+### Checklist Bloque 4
+
+- [x] ps aux → interpreto columnas y ordeno por memoria/CPU
+- [x] systemctl → listo, controlo y verifico servicios
+- [x] netstat/ss → identifico puertos abiertos y servicios expuestos
+
+**Próximo:** Repaso Bloque 4 (Jueves Semana 2)
