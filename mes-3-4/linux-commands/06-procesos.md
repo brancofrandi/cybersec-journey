@@ -37,10 +37,15 @@
 ### Bloque 4 — Servicios: conceptos consolidados
 
 **systemctl — comandos base**
+
 list-units --type=service --state=running | wc -l → 213 servicios
+
 status SERVICIO → estado actual
+
 stop SERVICIO → detiene inmediatamente
+
 start SERVICIO → inicia inmediatamente
+
 disable SERVICIO → no arranca al boot
 
 
@@ -83,7 +88,7 @@ udp 0.0.0.0:68 systemd-networkd (DHCP)
 
 ---
 
-### Comandos nuevos dominados
+### Comandos nuevos
 
 ps aux --sort=-%mem | head -5
 
