@@ -48,6 +48,20 @@ nmap --script http-php-version 127.0.0.1 -p 80
 ### http-headers
 Muestra los headers HTTP que devuelve el servidor.
 
+| http-headers:
+| Server: Apache/2.4.66 (Debian)
+| Last-Modified: Fri, 20 Mar 2026 06:45:09 GMT
+| Content-Length: 10703
+| Content-Type: text/html
+
+**Información útil para un atacante:**
+- `Server` expone versión exacta del software
+- `Last-Modified` indica cuándo fue actualizado
+- En producción el header Server debería ocultarse
+
+### ssh-auth-methods
+Detecta qué métodos de autenticación acepta el servidor SSH.
+
 | ssh-auth-methods:
 | Supported authentication methods:
 | publickey
