@@ -1,5 +1,5 @@
 ## Sesión 12 — Bandit nivel 15: conexión SSL con OpenSSL
-**Fecha:** [fecha de hoy]
+**Fecha:** [01/08/26]
 
 ---
 
