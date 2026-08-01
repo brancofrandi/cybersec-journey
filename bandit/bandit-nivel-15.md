@@ -88,5 +88,3 @@ respondió con la contraseña del nivel siguiente.
 5. Escribir la contraseña de bandit14
 6. Recibir la contraseña del nivel 16
 
-
-## Resultado de la conexión
