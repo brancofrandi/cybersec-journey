@@ -1,4 +1,4 @@
-## Sesión 13 — Wireshark: análisis de tráfico real y reporte profesional
+## Sesión 12 — Wireshark: análisis de tráfico real y reporte profesional
 **Fecha:** 04/08/2026
 
 ---
