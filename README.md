@@ -17,5 +17,7 @@
 |-----------------|------------|
 | Mes 1-2: Redes | COMPLETO |
 | Mes 3-4: Linux | COMPLETO |
-| Mes 5-6: Tools | En curso |
-| Mes 7-8: CTFs | Pendiente |
+| Mes 5-6: Tools | COMPLETO |
+| Mes 7-8: SIEM  | En curso |
+| Mes 9-10: Portfolio | Pendiente |
+| Mes 11-12: Empleo | Pendiente |
