@@ -1,3 +1,57 @@
+## Wazuh — Conceptos básicos
+**Fecha:** 13/09/2026
+
+---
+
+## ¿Qué es Wazuh?
+
+SIEM (Security Information and Event Management) open source.
+Recopila logs de múltiples fuentes, correlaciona eventos,
+detecta amenazas y genera alertas en tiempo real.
+Es la herramienta que usa un analista SOC todos los días.
+
+---
+
+## Los tres componentes
+
+**Wazuh Indexer:**
+Almacena todos los eventos y logs que llegan al SIEM.
+Base de datos basada en OpenSearch.
+Guarda la información para que se pueda buscar y analizar.
+
+**Wazuh Server:**
+El cerebro del sistema.
+Recibe los logs de los agentes instalados en los equipos.
+Aplica las reglas de detección.
+Genera alertas cuando encuentra algo sospechoso.
+
+**Wazuh Dashboard:**
+Interfaz gráfica que se abre en el navegador.
+Muestra eventos, alertas y métricas en tiempo real.
+Lo que ve un analista SOC todos los días.
+
+---
+
+## ¿Qué es un agente?
+
+Software que se instala en cada equipo a monitorear.
+Recopila los logs del equipo y los envía al Wazuh Server.
+Sin agentes, Wazuh no tiene datos que analizar.
+
+---
+
+## Flujo completo
+
+Equipo monitoreado
+↓
+Wazuh Agent (recopila logs)
+↓
+Wazuh Server (analiza y aplica reglas)
+↓
+Wazuh Indexer (almacena)
+↓
+Wazuh Dashboard (muestra al analista)
+
 
 ---
 
