@@ -38,6 +38,7 @@ Nessus mostró además un aviso de "IP tracking irregularities" sin impacto func
 - **Política (Policy):** configuración de escaneo guardada y reutilizable. Vale la pena cuando se repetirá el mismo escaneo sobre los mismos objetivos; para un laboratorio puntual no es necesaria, pero sirve de práctica.
 - **CVSS v2:** vector `AV:N/AC:L/Au:N/C:C/I:C/A:C` (vector de ataque, complejidad, autenticación, impacto en confidencialidad/integridad/disponibilidad).
 - **CVSS v3:** agrega **PR** (privilegios requeridos), **UI** (interacción del usuario) y **S** (alcance):
+
 | Sigla | Qué mide |
 |---|---|
 | AV | Vector de ataque (N = por red) |
